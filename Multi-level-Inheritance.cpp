@@ -7,9 +7,10 @@ class Player
 public:
     string name;
     int age;
-    void setName(string n)
+    void setName(string n, int k)
     {
         name = n;
+        age =k;
     }
 };
 
@@ -28,6 +29,7 @@ public:
     {
         cout << "Name: " << name << endl;
         cout << "Runs: " << runs << endl;
+        cout << "Age :" <<age<< endl;
     }
 };
     
@@ -45,13 +47,16 @@ public:
 
 int main()
 {
+    cout<<"enter the name and age of player :"<<endl;
     int r;
     cin >> r;
     string s;
     cin >>s;
+    int k;
+    cin>>k;
     Cricketer c1;
     IndianCricketer c2;
-    c1.setName("Virat");
+    c1.setName("Virat",k);
     c1.setruns(r);
     c1.show();
     c2.setstate(s);
